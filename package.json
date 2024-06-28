@@ -1,0 +1,14 @@
+{
+  "name": "easybank-landing-page",
+  "version": "1.0.0",
+  "description": "landing page wrote with tailwindCSS",
+  "main": "index.js",
+  "scripts": {
+    "watch-tailwind": "tailwindcss -i ./css/input.css -o ./css/output.css --watch"
+  },
+  "author": "Arthur Lin",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
+  }
+}
