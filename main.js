@@ -1,8 +1,15 @@
 const toggleMenuBtn = document.querySelector(".toggle-menu-btn");
 const menu = document.querySelector(".menu");
+const bgBlur = document.querySelector(".bg-blur");
 
 toggleMenuBtn.addEventListener("click", () => {
-  menu.classList.contains("opacity-0")
-    ? menu.classList.replace("opacity-0", "opacity-1")
-    : menu.classList.replace("opacity-1", "opacity-0");
+  menu.classList.toggle("hidden");
+  bgBlur.classList.toggle("blur-sm");
+});
+
+window.addEventListener("resize", () => {
+  if (!menu.classList.contains("hidden")) {
+    menu.classList.add("hidden");
+    bgBlur.classList.remove("blur-sm");
+  }
 });
